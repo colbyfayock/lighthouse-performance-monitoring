@@ -23,8 +23,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Install Chrome
+      run: apt-get install chromium
+
     - name: Install Lighthouse
       run: npm install -g lighthouse
     
     - name: Running Lighthouse
-      run: lighthouse "https://www.colbyfayock.com"
+      run: lighthouse --chrome-flags="--headless" "https://www.colbyfayock.com"
