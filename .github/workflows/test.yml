@@ -11,7 +11,7 @@ jobs:
 
     - uses: colbyfayock/lighthouse-report-action@master
       with:
-        url: "https://colbyfayock.com"
+        url: "https://colbyfayock.com/"
 
     - uses: mikeal/publish-to-github-action@master
       env:
