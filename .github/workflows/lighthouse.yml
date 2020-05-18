@@ -5,24 +5,26 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Uses Node.js 12
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 12
+    - run: npm install -g yarn
+    - run: yarn install
 
-    - name: Install Lighthouse
-      run: npm install -g lighthouse
-    
-    - name: Running Lighthouse
-      run: lighthouse --chrome-flags="--headless" "https://www.colbyfayock.com"
+    - name: Lighthouse Audit
+      run: yarn lighthouse
+      env:
+        AUDIT_URL: "https://colbyfayock.com"
+
+    - uses: mikeal/publish-to-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,23 @@
+{
+  "name": "lighthouse-performance-monitoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lighthouse": "node scripts/lighthouse.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colbyfayock/lighthouse-performance-monitoring.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colbyfayock/lighthouse-performance-monitoring/issues"
+  },
+  "homepage": "https://github.com/colbyfayock/lighthouse-performance-monitoring#readme",
+  "dependencies": {
+    "lighthouse": "^5.6.0"
+  }
+}
