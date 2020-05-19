@@ -8,6 +8,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Test
+      uses: colbyfayock/test-action@master
 
     - uses: colbyfayock/lighthouse-report-action@v2
       with:
