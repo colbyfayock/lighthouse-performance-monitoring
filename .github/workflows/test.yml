@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: colbyfayock/lighthouse-report-action@v1
+    - uses: colbyfayock/lighthouse-report-action@v2
       with:
         url: "https://colbyfayock.com/"
         outputDirectory: "test-reports"
