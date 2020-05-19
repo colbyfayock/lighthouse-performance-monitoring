@@ -12,6 +12,7 @@ jobs:
     - uses: colbyfayock/lighthouse-report-action@master
       with:
         url: "https://colbyfayock.com/"
+        outputDirectory: "test-reports"
 
     - uses: mikeal/publish-to-github-action@master
       env:
