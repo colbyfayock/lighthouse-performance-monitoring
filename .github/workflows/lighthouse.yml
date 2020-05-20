@@ -1,8 +1,6 @@
 name: Lighthouse
 
-on:
-  schedule:
-    - cron:  '*/60 * * * *'
+on: [push, pull_request]
 
 jobs:
   monitor:
